@@ -1,4 +1,7 @@
 module.exports = {
+    plugins: [
+        'import',
+    ],
     rules: {
         'import/extensions': 'off',
         'import/order': ['warn', {

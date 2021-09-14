@@ -25,7 +25,9 @@ const mergeOptions = (...options) => options.reduce((prev, next) => {
 const mergeSimpleRule = (rule, options) => {
     const parent = regularizeRule(rule)
 
-    return [parent[0], mergeOptions(
+    const enabled = parent[0] || 'off'
+
+    return [enabled, mergeOptions(
         parent[1],
         options,
     )]
