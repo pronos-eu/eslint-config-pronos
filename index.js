@@ -2,7 +2,19 @@ module.exports = {
     extends: [
         'airbnb-base',
         './rules/style',
+        './rules/best-practices',
         './rules/import',
     ],
-    rules: {},
+    rules: {
+        'space-before-function-paren': ['error', {
+            anonymous: 'ignore', // TODO: always
+            named: 'ignore', // TODO: always
+            asyncArrow: 'always',
+        }],
+        'max-len': ['warn', 160], // TODO: ["error", 160]
+        'no-underscore-dangle': 'off', // TODO: change to warn?
+        'no-param-reassign': 'warn', // TODO: remove this line as by default it's an error
+        'no-restricted-syntax': 'warn', // TODO: remove this line as by default it's an error
+        'class-methods-use-this': 'warn', // TODO: remove this line as by default it's an error
+    },
 }
