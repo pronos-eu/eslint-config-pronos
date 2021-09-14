@@ -4,7 +4,25 @@
   "description": "Common configuration for eslint used in Pronos",
   "main": "index.js",
   "repository": "github.com/pronos-eu/eslint-config-pronos.git",
-  "author": "Pronos Sp. z o.o.",
-  "license": "Unlicense",
-  "private": true
+  "author": "Pronos Sp. z o.o. (http://pronos.eu)",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.8.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
 }
