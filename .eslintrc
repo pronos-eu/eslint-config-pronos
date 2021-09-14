@@ -1,5 +1,6 @@
+// Use the defined config to verify rule definitions
 {
     "extends": [
-        "./index"
+        "./index" 
     ]
 }
