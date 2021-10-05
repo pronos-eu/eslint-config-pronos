@@ -18,7 +18,7 @@ module.exports = {
 
         // Require trailing comma in multiline objects, arrays and functions
         // https://eslint.org/docs/rules/comma-dangle
-        'comma-dangle': ['warn', 'always-multiline'],
+        'comma-dangle': ['error', 'always-multiline'],
 
         // Require consistent indentation
         // https://eslint.org/docs/rules/indent
@@ -34,7 +34,7 @@ module.exports = {
 
         // Require consistent spacing in object literals
         // https://eslint.org/docs/rules/object-curly-spacing
-        'object-curly-spacing': ['warn', 'never'],
+        'object-curly-spacing': ['error', 'never'],
 
         // To Review:
         'no-unneeded-ternary': 'warn',
