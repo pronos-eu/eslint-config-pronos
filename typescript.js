@@ -1,6 +1,13 @@
 module.exports = {
+    plugins: ['@typescript-eslint'],
     extends: [
-        'plugin:@typescript-eslint/recommended',
+        'plugin:import/typescript',
     ],
-    rules: {},
+    overrides: [{
+        files: ['*.ts', '*.tsx'],
+        extends: [
+            'plugin:@typescript-eslint/recommended',
+        ],
+        rules: {},
+    }],
 }
