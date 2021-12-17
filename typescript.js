@@ -7,6 +7,7 @@ module.exports = {
         files: ['*.ts', '*.tsx'],
         extends: [
             'plugin:@typescript-eslint/recommended',
+            './rules/typescript/style',
         ],
         rules: {},
     }],

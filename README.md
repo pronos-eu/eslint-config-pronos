@@ -16,6 +16,12 @@ Config extension containing rules related to usage of React framework and JSX.
 
 Config extension containing rules and overrides related to usage of TypeScript.
 
+---
+**NOTE**
+
+If you want to properly apply linter to TypeScript files, you need to use `--ext .js,.ts` option (add `.jsx` and `.tsx` where applicable).
+---
+
 ## Usage
 
 - Add package to list of devDependencies in `package.json`.

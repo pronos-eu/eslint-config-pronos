@@ -1,3 +1,7 @@
+v0.3.1 / 2021-12-17
+===================
+- Updated `pronos/typescript` config
+
 v0.3.0 / 2021-10-05
 ===================
 - Updated few style rules
