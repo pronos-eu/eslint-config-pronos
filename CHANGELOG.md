@@ -1,3 +1,7 @@
+v0.4.0 / 2021-12-17
+===================
+- Upgraded `@typescript-eslint/eslint-plugin` to `v5.7.0`
+
 v0.3.1 / 2021-12-17
 ===================
 - Updated `pronos/typescript` config
