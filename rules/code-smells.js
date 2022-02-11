@@ -10,7 +10,7 @@ module.exports = {
             message: 'Please use getParseConfig.',
         }],
         'import/no-internal-modules': ['error', {
-            forbid: ['../modules/*'],
+            forbid: ['**/../modules/*'],
         }],
     },
 }
