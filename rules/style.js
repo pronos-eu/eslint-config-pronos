@@ -36,6 +36,11 @@ module.exports = {
         // https://eslint.org/docs/rules/object-curly-spacing
         'object-curly-spacing': ['error', 'never'],
 
+        // Ignore warnings regarding newlines before arrow shorthand body
+        // Removed after discussion on #dev-convo
+        // https://eslint.org/docs/rules/implicit-arrow-linebreak
+        'implicit-arrow-linebreak': 'off',
+
         // To Review:
         'no-unneeded-ternary': 'warn',
         

@@ -14,7 +14,11 @@ module.exports = {
 
         // Enforce or disallow spaces inside of curly braces in JSX attributes
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
-        'react/jsx-curly-spacing': ['warn', 'never', {allowMultiline: true}],
+        'react/jsx-curly-spacing': ['warn', {
+            when: 'never',
+            children: true,
+            allowMultiline: true,
+        }],
 
         // Enforce spacing around jsx equals signs
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
