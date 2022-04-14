@@ -14,7 +14,7 @@ const mergeOptions = (...options) => options.reduce((prev, next) => {
     const changedOptions = Object.keys(next)
 
     const newOptions = Object.fromEntries(
-        changedOptions.map(key => [key, 
+        changedOptions.map(key => [key,
             next[key](prev[key]),
         ]),
     )

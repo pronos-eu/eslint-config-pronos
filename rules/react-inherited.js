@@ -2,7 +2,7 @@
 
 module.exports = {
     rules: {
-        // AIRBNB DEFAULTS 
+        // AIRBNB DEFAULTS
 
         // Prevent missing displayName in a React component definition
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -162,7 +162,7 @@ module.exports = {
         // Enforce spaces before the closing bracket of self-closing JSX elements
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
         // Deprecated in favor of jsx-tag-spacing
-        'react/jsx-space-before-closing': ['off', 'always'], 
+        'react/jsx-space-before-closing': ['off', 'always'],
 
         // Forbids using non-exported propTypes
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
