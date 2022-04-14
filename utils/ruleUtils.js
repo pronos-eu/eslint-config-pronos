@@ -35,9 +35,15 @@ const mergeSimpleRule = (rule, options) => {
 
 const extendList = (list, ...extensions) => (list || []).concat(extensions)
 
+const tsRule = (core, rule) => ({
+    [rule]: 'off',
+    [`@typescript-eslint/${rule}`]: core[rule],
+})
+
 module.exports = {
     extendList,
     mergeOptions,
     mergeSimpleRule,
     regularizeRule,
+    tsRule,
 }
