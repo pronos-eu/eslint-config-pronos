@@ -2,25 +2,37 @@
 
 module.exports = {
     rules: {
+        // Enforce "one true brace style"
+        // https://eslint.org/docs/rules/brace-style/
+        'brace-style': ['error', '1tbs', {allowSingleLine: true}],
+
         // Require trailing comma in multiline objects, arrays and functions
-        // https://eslint.org/docs/rules/comma-dangle
+        // https://eslint.org/docs/rules/comma-dangle/
         'comma-dangle': ['error', 'always-multiline'],
+
+        // Enforce spacing before and after comma
+        // https://eslint.org/docs/rules/comma-spacing/
+        'comma-spacing': ['error', {before: false, after: true}],
+
+        // Enforce spacing between function and invocation
+        // https://eslint.org/docs/rules/func-call-spacing/
+        'func-call-spacing': ['error', 'never'],
 
         // Ignore warnings regarding newlines before arrow shorthand body
         // Removed after discussion on #dev-convo
-        // https://eslint.org/docs/rules/implicit-arrow-linebreak
+        // https://eslint.org/docs/rules/implicit-arrow-linebreak/
         'implicit-arrow-linebreak': 'off',
 
         // Require consistent indentation
-        // https://eslint.org/docs/rules/indent
+        // https://eslint.org/docs/rules/indent/
         indent: ['error', 4, {SwitchCase: 1}],
 
         // Disallow usage of optional semicolons in favor of ASI
-        // https://eslint.org/docs/rules/semi
+        // https://eslint.org/docs/rules/semi/
         semi: ['error', 'never'],
 
         // Disallow multiple empty lines in code and padding at start and end of file
-        // https://eslint.org/docs/rules/no-multiple-empty-lines
+        // https://eslint.org/docs/rules/no-multiple-empty-lines/
         'no-multiple-empty-lines': ['warn', {
             max: 1,
             maxBOF: 0,
@@ -28,23 +40,51 @@ module.exports = {
         }],
 
         // Require consistent spacing in object literals
-        // https://eslint.org/docs/rules/object-curly-spacing
+        // https://eslint.org/docs/rules/object-curly-spacing/
         'object-curly-spacing': ['error', 'never'],
 
         // Enforce newline before return statement if it's not the only statement in a block
-        // https://eslint.org/docs/rules/padding-line-between-statements
+        // https://eslint.org/docs/rules/padding-line-between-statements/
         'padding-line-between-statements': ['error',
             {blankLine: 'always', prev: '*', next: 'return'},
         ],
 
         // Enforce consistent style of strings
-        // https://eslint.org/docs/rules/quotes
+        // https://eslint.org/docs/rules/quotes/
         quotes: ['error', 'single', {allowTemplateLiterals: true, avoidEscape: true}],
 
+        // Enforces consistent spacing before function parenthesis.
+        // https://eslint.org/docs/rules/space-before-function-paren/
+        'space-before-function-paren': ['error', {
+            anonymous: 'always',
+            named: 'never',
+            asyncArrow: 'always',
+        }],
+        
         // Require spaces around operators
-        // https://eslint.org/docs/rules/space-infix-ops
+        // https://eslint.org/docs/rules/space-infix-ops/
         'space-infix-ops': 'error',
 
+        // SECTION
+        // AirBnb rules imported for TS extension:
+
+        // Enforce a space before and after keywords
+        // https://eslint.org/docs/rules/keyword-spacing/
+        'keyword-spacing': ['error', {
+            before: true,
+            after: true,
+            overrides: {
+                return: {after: true},
+                throw: {after: true},
+                case: {after: true},
+            },
+        }],
+
+        // Disallow use of the Array constructor
+        // https://eslint.org/docs/rules/no-array-constructor/
+        'no-array-constructor': 'error',
+
+        // SECTION
         // TODO: Test section, check, document then move above
         'no-trailing-spaces': ['warn', {
             skipBlankLines: true,
@@ -52,28 +92,28 @@ module.exports = {
         'no-unneeded-ternary': 'warn',
         'no-unexpected-multiline': 'warn',
 
+        // SECTION
         // TODO: Review following rules
-        'linebreak-style': 'off',
-        'function-paren-newline': 'off',
-        'operator-linebreak': ['error', 'after'],
-        'no-confusing-arrow': 'warn',
-        'no-plusplus': 'off',
-        'no-async-promise-executor': 'off',
-        'no-use-before-define': 'off',
-        'consistent-return': 'off',
-        'prefer-const': 'warn',
         'arrow-parens': ['warn', 'as-needed'],
-        'no-mixed-operators': 'off',
-        'space-unary-ops': ['warn', {words: true, nonwords: false}],
+        'consistent-return': 'off',
         'default-case': 'error',
-        'keyword-spacing': 'warn',
-        'object-shorthand': 'warn',
-        'no-undef': 'off',
+        'function-paren-newline': 'off',
+        'id-length': ['warn', {min: 2, exceptions: ['_', 'i', 'j', 'k', 'n', 'm']}],
+        'linebreak-style': 'off',
+        'no-async-promise-executor': 'off',
         'no-case-declarations': 'warn',
+        'no-confusing-arrow': 'warn',
+        'no-mixed-operators': 'off',
+        'no-plusplus': 'off',
+        'no-undef': 'off',
+        'no-return-assign': 'off',
+        'no-shadow': 'warn',
+        'no-use-before-define': 'off',
+        'object-shorthand': 'warn',
+        'operator-linebreak': ['error', 'after'],
+        'prefer-const': 'warn',
         'prefer-destructuring': 'warn',
         'prefer-promise-reject-errors': 'warn',
-        'id-length': ['warn', {min: 2, exceptions: ['_', 'i', 'j', 'k', 'n', 'm']}],
-        'no-shadow': 'warn',
-        'no-return-assign': 'off',
+        'space-unary-ops': ['warn', {words: true, nonwords: false}],
     },
 }
