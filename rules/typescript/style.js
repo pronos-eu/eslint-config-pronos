@@ -64,7 +64,7 @@ module.exports = {
             'ts-ignore': 'allow-with-description',
             'ts-nocheck': true,
             'ts-check': false,
-        }]
+        }],
 
         // Require consistent delimiters in type and interface definitions
         // https://typescript-eslint.io/rules/member-delimiter-style
