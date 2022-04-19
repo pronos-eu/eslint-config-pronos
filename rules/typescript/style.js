@@ -4,6 +4,9 @@ const {tsRule} = require('../../utils/ruleUtils')
 
 module.exports = {
     rules: {
+        // SECTION:
+        // Extensions of the JS rules for the TS features
+
         // Enforce "one true brace style"
         // https://typescript-eslint.io/rules/brace-style/
         ...tsRule(coreStyle, 'brace-style'),
@@ -28,11 +31,15 @@ module.exports = {
         // https://typescript-eslint.io/rules/no-array-constructor/
         ...tsRule(coreStyle, 'no-array-constructor'),
 
+        // Disallow variable declarations from shadowing variables declared in the outer scope
+        // https://typescript-eslint.io/rules/no-shadow/
+        ...tsRule(coreStyle, 'no-shadow'),
+
         // Require consistent spacing withing object literals and object types.
         // https://typescript-eslint.io/rules/object-curly-spacing/
         ...tsRule(coreStyle, 'object-curly-spacing'),
 
-        // Enforces consistent spacing before function parenthesis.
+        // Enforces consistent spacing before function parenthesis
         // https://typescript-eslint.io/rules/space-before-function-paren/
         ...tsRule(coreStyle, 'space-before-function-paren'),
 
@@ -43,6 +50,21 @@ module.exports = {
         // Disallow usage of optional semicolons in favor of ASI
         // https://typescript-eslint.io/rules/semi/
         ...tsRule(coreStyle, 'semi'),
+
+        // SECTION:
+        // TypeScript-specific rules
+
+        // Bans TS directive comments from being used or requires descriptions after directive.
+        // true -> ban the directive completely
+        // 'allow-with-description' -> require a comment as why it's needed
+        // false -> allow the use of directive
+        // https://typescript-eslint.io/rules/ban-ts-comment/
+        '@typescript-eslint/ban-ts-comment': ['error', {
+            'ts-expect-error': 'allow-with-description',
+            'ts-ignore': 'allow-with-description',
+            'ts-nocheck': true,
+            'ts-check': false,
+        }]
 
         // Require consistent delimiters in type and interface definitions
         // https://typescript-eslint.io/rules/member-delimiter-style

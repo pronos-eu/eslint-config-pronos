@@ -91,6 +91,7 @@ module.exports = {
         }],
         'no-unneeded-ternary': 'warn',
         'no-unexpected-multiline': 'warn',
+        'no-shadow': 'warn',
 
         // SECTION
         // TODO: Review following rules
@@ -107,7 +108,6 @@ module.exports = {
         'no-plusplus': 'off',
         'no-undef': 'off',
         'no-return-assign': 'off',
-        'no-shadow': 'warn',
         'no-use-before-define': 'off',
         'object-shorthand': 'warn',
         'operator-linebreak': ['error', 'after'],
