@@ -4,16 +4,58 @@ const {tsRule} = require('../../utils/ruleUtils')
 
 module.exports = {
     rules: {
+        // Enforce "one true brace style"
+        // https://typescript-eslint.io/rules/brace-style/
+        ...tsRule(coreStyle, 'brace-style'),
+
         // Require trailing comma in multiline objects, arrays and functions
         // https://typescript-eslint.io/rules/comma-dangle/
         ...tsRule(coreStyle, 'comma-dangle'),
 
+        // Enforce spacing before and after comma
+        // https://typescript-eslint.io/rules/comma-spacing/
+        ...tsRule(coreStyle, 'comma-spacing'),
+
+        // Enforce spacing between function and invocation
+        // https://typescript-eslint.io/rules/func-call-spacing/
+        ...tsRule(coreStyle, 'func-call-spacing'),
+
+        // Enforce a space before and after keywords
+        // https://typescript-eslint.io/rules/keyword-spacing/
+        ...tsRule(coreStyle, 'keyword-spacing'),
+
+        // Disallow use of the Array constructor
+        // https://typescript-eslint.io/rules/no-array-constructor/
+        ...tsRule(coreStyle, 'no-array-constructor'),
+
         // Require consistent spacing withing object literals and object types.
-        // https://typescript-eslint.io/rules/object-curly-spacing
+        // https://typescript-eslint.io/rules/object-curly-spacing/
         ...tsRule(coreStyle, 'object-curly-spacing'),
+
+        // Enforces consistent spacing before function parenthesis.
+        // https://typescript-eslint.io/rules/space-before-function-paren/
+        ...tsRule(coreStyle, 'space-before-function-paren'),
 
         // Require spaces around operators
         // https://typescript-eslint.io/rules/space-infix-ops/
         ...tsRule(coreStyle, 'space-infix-ops'),
+
+        // Disallow usage of optional semicolons in favor of ASI
+        // https://typescript-eslint.io/rules/semi/
+        ...tsRule(coreStyle, 'semi'),
+
+        // Require consistent delimiters in type and interface definitions
+        // https://typescript-eslint.io/rules/member-delimiter-style
+        '@typescript-eslint/member-delimiter-style': ['error', {
+            multiline: {
+                delimiter: 'semi',
+                requireLast: true,
+            },
+            singleline: {
+                delimiter: 'semi',
+                requireLast: false,
+            },
+            multilineDetection: 'brackets',
+        }],
     },
 }
