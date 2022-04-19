@@ -79,5 +79,15 @@ module.exports = {
             },
             multilineDetection: 'brackets',
         }],
+
+        // Require consistent spacing around type annotations
+        // https://typescript-eslint.io/rules/type-annotation-spacing
+        '@typescript-eslint/type-annotation-spacing': ['error', {
+            before: false,
+            after: true,
+            overrides: {
+                arrow: {before: true},
+            },
+        }],
     },
 }
