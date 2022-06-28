@@ -49,6 +49,11 @@ module.exports = {
             {blankLine: 'always', prev: '*', next: 'return'},
         ],
 
+        'prefer-const': ['warn', {
+            destructuring: 'any',
+            ignoreReadBeforeAssign: true,
+        }],
+
         // Enforce consistent style of strings
         // https://eslint.org/docs/rules/quotes/
         quotes: ['error', 'single', {allowTemplateLiterals: true, avoidEscape: true}],
@@ -111,7 +116,6 @@ module.exports = {
         'no-use-before-define': 'off',
         'object-shorthand': 'warn',
         'operator-linebreak': ['error', 'after'],
-        'prefer-const': 'warn',
         'prefer-destructuring': 'warn',
         'prefer-promise-reject-errors': 'warn',
         'space-unary-ops': ['warn', {words: true, nonwords: false}],

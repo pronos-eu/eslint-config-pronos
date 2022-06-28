@@ -4,7 +4,6 @@ module.exports = {
         'airbnb-base',
         './rules/style',
         './rules/best-practices',
-        './rules/import',
     ],
     rules: {
         'space-before-function-paren': ['error', {
