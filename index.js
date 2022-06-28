@@ -1,7 +1,7 @@
 module.exports = {
     reportUnusedDisableDirectives: true,
     extends: [
-        'airbnb-base',
+        './rules/airbnb',
         './rules/style',
         './rules/best-practices',
     ],

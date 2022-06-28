@@ -194,11 +194,6 @@ module.exports = {
     },
 
     settings: {
-        'import/resolver': {
-            node: {
-                extensions: ['.js', '.jsx', '.json'],
-            },
-        },
         react: {
             pragma: 'React',
             version: 'detect',
