@@ -12,6 +12,12 @@ module.exports = {
             // "ignoreRestSiblings": true,
         }],
 
+        // Disallow usage of console calls
+        // https://eslint.org/docs/latest/rules/no-console
         'no-console': 'error',
+
+        // Disallow usage of undefined variables
+        // https://eslint.org/docs/latest/rules/no-undef
+        'no-undef': 'error',
     },
 }

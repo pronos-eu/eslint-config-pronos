@@ -111,7 +111,6 @@ module.exports = {
         'no-confusing-arrow': 'warn',
         'no-mixed-operators': 'off',
         'no-plusplus': 'off',
-        'no-undef': 'off',
         'no-return-assign': 'off',
         'no-use-before-define': 'off',
         'object-shorthand': 'warn',

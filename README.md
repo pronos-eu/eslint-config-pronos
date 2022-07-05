@@ -40,6 +40,31 @@ Make sure that the base config is the first one included, as the other configs m
 
 - If needed, you can apply local overrides in the `rules` section in project's `.eslintrc`. That being said, please be very cautious about introducing local overrrides, as it may cause major differences across all of the components. Each of local rules should be annotated with a `// TODO:` comment describing what is the expected behaviour of the rule, possibly best to add a task, which further describes what needs to be done.
 
+## Debugging and profiling
+
+To show timers per file use:
+```
+Powershell:
+$env:DEBUG="eslint:cli-engine"
+
+Bash:
+DEBUG="eslint:cli-engine"
+```
+
+To show a table of time spent per rule use:
+```
+Powershell:
+$env:TIMING="all"
+or
+$env:TIMING=<number>
+
+Bash:
+TIMING=all
+or
+TIMING=<number>
+```
+where `<number>` is number of top results you wish to see
+
 ## Contributions
 
 When introducing changes please remember to describe changes to `CHANGELOG.md` and tag new version.
